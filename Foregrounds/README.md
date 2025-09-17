@@ -3,7 +3,7 @@
 
 This script generates simulated full-sky foreground maps across a range of frequencies in HEALPix format, suitable for intensity mapping and component separation studies in radio and microwave astronomy.
 
-## 📦 Description
+## Description
 
 Each foreground component (e.g., synchrotron, free-free, AME, thermal dust, point sources, CMB) can be independently configured, simulated, and optionally saved as a 3D frequency cube.
 
@@ -11,7 +11,7 @@ The script uses models defined in a configuration file (`parameters.ini`) and ge
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 All parameters are defined in `parameters.ini`. Sections include:
 
@@ -44,7 +44,7 @@ save_cube = True
 
 ---
 
-## 🛠️ Components Supported
+## Components Supported
 
 - **Synchrotron**
 - **Free-Free**
@@ -57,7 +57,7 @@ Each component adds to the total foreground cube. Individual cubes are optionall
 
 ---
 
-## 📤 Output
+## Output
 
 - `output/foreground_cube_<suffix>.fits` — Total emission cube  
 - `output/<component>_cube_<suffix>.fits` — Individual component cubes (if enabled)  
@@ -66,7 +66,7 @@ All outputs are 3D arrays with shape `(n_channels, n_pixels)` in HEALPix RING or
 
 ---
 
-## ▶️ Running the Script
+## Running the Script
 
 ```bash
 python3 generate_foregrounds.py
@@ -76,7 +76,7 @@ Make sure `parameters.ini` and all required input maps (e.g., templates, spectra
 
 ---
 
-## 🧩 Dependencies
+## Dependencies
 
 - **Python** ≥ 3.6  
 - **numpy**  
@@ -90,12 +90,12 @@ Make sure `parameters.ini` and all required input maps (e.g., templates, spectra
 
 ---
 
-## 🧪 Use Case
+## Use Case
 
 Designed for simulation-based studies of component separation techniques (e.g., GNILC, PCA) in experiments like MeerKAT, SKA, or CMB satellite missions.
 
 ---
 
-## 📄 License & Attribution
+## License & Attribution
 
 This code is for research purposes. If used in a publication, please acknowledge the simulation framework or cite relevant component models.
