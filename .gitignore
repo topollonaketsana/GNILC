@@ -1,0 +1,13 @@
+# Large simulation/data files
+*.fits
+*.h5
+*.zip
+*.tar.gz
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs / cache
+*.log
+__pycache__/
+*.pyc
