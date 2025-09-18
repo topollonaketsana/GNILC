@@ -2,12 +2,11 @@ import numpy as np
 import healpy as hp
 from astropy.io import fits as pyfits
 import subprocess
-#import ConfigParser
 import configparser
 import os
 
-import foregrounds.GNILC.gnilc_auxiliary as gnilc_auxiliary
-import foregrounds.GNILC.misc_functions as misc_functions
+import GNILC.gnilc_auxiliary as gnilc_auxiliary
+import GNILC.misc_functions as misc_functions
 
 import time
 
