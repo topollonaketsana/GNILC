@@ -2,7 +2,7 @@ GNILC: Generalized Needlet ILC for Component Separation
 
 This repository provides a Python implementation of the GNILC algorithm for astrophysical component separation in multifrequency sky maps. It is particularly suitable for diffuse emission extraction in full-sky or large-area radio and microwave surveys.
 
-## 📚 References
+## References
 
 - Remazeilles et al. (2011), *MNRAS*, 410, 2481  
 - Olivari, Remazeilles & Dickinson (2016), *MNRAS*, 456, 2749  
@@ -23,7 +23,7 @@ The GNILC method performs:
 
 ---
 
-## 📁 Input Files
+## Input Files
 
 Defined in `parameters.ini`, expected in `input/`:
 
@@ -51,7 +51,7 @@ save_wavelets_dimensions = True
 
 ---
 
-## 📤 Output Files
+## Output Files
 
 - `output/reconstructed_maps_<suffix>.fits` — GNILC-reconstructed maps  
 - `output/wavelets_dimensions_<suffix>.fits` — (optional) AIC-derived dimension maps  
@@ -59,7 +59,7 @@ save_wavelets_dimensions = True
 
 ---
 
-## ⚙️ Dependencies
+## Dependencies
 
 - Python ≥ 3.6  
 - `numpy`  
@@ -69,7 +69,7 @@ save_wavelets_dimensions = True
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 1. Edit `parameters.ini`
 2. Place all `.fits` files in the `input/` directory
@@ -92,7 +92,7 @@ Intermediate files are cleaned or saved depending on `parameters.ini` flags.
 
 ---
 
-## 📄 License & Attribution
+## License & Attribution
 
 This implementation is provided for research use. If used in publications, please cite the relevant GNILC references listed above.
 """
