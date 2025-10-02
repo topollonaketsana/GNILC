@@ -189,45 +189,45 @@ def cross_spectrum(map1, map2):
 
     return cl
 
-#def localcovar(map1, map2, pixperscale):
+'''def localcovar(map1, map2, pixperscale):
 
-#    """Local covariance of two maps in the pixel space."""
+    """Local covariance of two maps in the pixel space."""
 
-#    map = map1 * map2
-#    npix = map.size
-#    nside = hp.pixelfunc.npix2nside(npix)
-#    nsidecovar = nside
+    map = map1 * map2
+    npix = map.size
+    nside = hp.pixelfunc.npix2nside(npix)
+    nsidecovar = nside
 
     # First degrade a bit to speed-up smoothing
 
-#    if (nside / 4) > 1:
-#        nside_out = nside / 4
-#    else:
-#        nside_out = 1
+    if (nside / 4) > 1:
+        nside_out = nside / 4
+    else:
+        nside_out = 1
 
-#    stat = hp.pixelfunc.ud_grade(map, nside_out = nside_out, order_in = 'RING', order_out = 'RING')
+    stat = hp.pixelfunc.ud_grade(map, nside_out = nside_out, order_in = 'RING', order_out = 'RING')
     
     # Compute alm
 
-#    lmax = 3 * nside_out - 1
-#    nlm_tot = float(lmax) * float(lmax + 1.0) / 2.0 + lmax + 1.0
-#    alm = hp.sphtfunc.map2alm(stat, lmax=lmax, iter=1, use_weights=True)
+    lmax = 3 * nside_out - 1
+    nlm_tot = float(lmax) * float(lmax + 1.0) / 2.0 + lmax + 1.0
+    alm = hp.sphtfunc.map2alm(stat, lmax=lmax, iter=1, use_weights=True)
 
     # Find smoothing size
 
-#    pixsize = np.sqrt(4.0 * np.pi / npix)
-#    fwhm = pixperscale * pixsize
-#    bl = hp.sphtfunc.gauss_beam(fwhm, lmax)
+    pixsize = np.sqrt(4.0 * np.pi / npix)
+    fwhm = pixperscale * pixsize
+    bl = hp.sphtfunc.gauss_beam(fwhm, lmax)
 
     # Smooth the alm
 
-#    alm_s = hp.sphtfunc.almxfl(alm, bl)
+    alm_s = hp.sphtfunc.almxfl(alm, bl)
     
     # Back to pixel space
 
-#    stat_out = hp.sphtfunc.alm2map(alm_s, nsidecovar)
+    stat_out = hp.sphtfunc.alm2map(alm_s, nsidecovar)
 
-#    return stat_out
+    return stat_out'''
 
 
 def localcovar(map1, map2, pixperscale):
@@ -276,17 +276,17 @@ def localcovar(map1, map2, pixperscale):
 
 
 
-#def whitening_matrix(R):
+'''def whitening_matrix(R):
 
-  #  """This function computes the whitening matrix W of positive definite square matrix R (the Cholesky decomposition of the invert: R^{-1}=W^t*W so that W*R*W^t=I).
-   # """
+    """This function computes the whitening matrix W of positive definite square matrix R (the Cholesky decomposition of the invert: R^{-1}=W^t*W so that W*R*W^t=I).
+    """
 
-   # evec0, eval, V = np.linalg.svd(R, full_matrices=True)
-   # evec = np.transpose(evec0)
-   # D = np.diagflat(eval)
-   # W = np.array(np.linalg.inv(np.matrix(np.sqrt(D))) * np.matrix(evec))
+    evec0, eval, V = np.linalg.svd(R, full_matrices=True)
+    evec = np.transpose(evec0)
+    D = np.diagflat(eval)
+    W = np.array(np.linalg.inv(np.matrix(np.sqrt(D))) * np.matrix(evec))
 
-   # return W
+    return W'''
 
 
 def whitening_matrix(R):
