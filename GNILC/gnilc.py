@@ -53,8 +53,9 @@ if not os.path.exists(directory_out):
 
 ##### Maps: info
 
-maps = pyfits.getdata('input/' + input_maps + '.fits')  # read input maps
-maps_target = pyfits.getdata('input/' + prior_maps +'.fits')   # read prior map
+maps = pyfits.getdata(input_maps + '.fits')
+maps_target = pyfits.getdata(prior_maps + '.fits')
+
 
 nf = maps[:, 0].size
 nside = hp.pixelfunc.npix2nside((maps[0, :]).size)
@@ -136,12 +137,12 @@ alm_map = 0
 
 print( "Computing the GNILC weights in each wavelet band.")
 
-galmask = pyfits.getdata('input/' + mask + '.fits')   # read Galactic mask
+galmask = pyfits.getdata('../data/' + mask + '.fits')   # read Galactic mask
 
 if type(galmask) is np.ndarray:
     pass
 else:
-    galmask = hp.read_map('input/' + mask + '.fits')
+    galmask = hp.read_map('../data/' + mask + '.fits')
 print(type(galmask))
 
 nmodes_band = np.zeros(nbands)   # number of modes for bands
