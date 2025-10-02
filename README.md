@@ -25,7 +25,7 @@ Simulates full-sky foreground emission in HEALPix format. Supports:
 Each component is configurable via `parameters.ini`.
 
 Script: `generate_foregrounds.py`  
-Output: `output/foreground_cube_<suffix>.fits`, individual component cubes (optional)
+Output: `output/foreground_cube_<suffix>.fits`, individual component cubes 
 
 ---
 
@@ -46,11 +46,3 @@ Output: `output/reconstructed_maps_<suffix>.fits`
 Requires input maps (`input_maps.fits`, `prior_maps.fits`) and a sky mask.
 
 ---
-
-## How to Use
-
-1. **Configure `parameters.ini`** for foreground simulation
-2. Run foreground generator:
-
-```bash
-python3 generate_foregrounds.py
