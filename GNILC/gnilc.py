@@ -314,12 +314,12 @@ for i in range(0, nf):
     # GNILC maps (fits file)
     maps_out[i, :] = ilc_map[i, :]*galmask
 
-pyfits.writeto('output/reconstructed_maps_' + output_suffix + '.fits', maps_out, overwrite = True)
+pyfits.writeto('./output/reconstructed_maps_' + output_suffix + '.fits', maps_out, overwrite = True)
 
 ##### Clean and save things 
 
 if save_wavelets_dimensions:
-    pyfits.writeto('output/wavelets_dimensions_' + output_suffix + '.fits', wavelets_dimensions, overwrite = True)
+    pyfits.writeto('./output/wavelets_dimensions_' + output_suffix + '.fits', wavelets_dimensions, overwrite = True)
 
 if save_ilc_weights:
     for j in range(0, nbands):
